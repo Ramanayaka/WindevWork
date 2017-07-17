@@ -1,0 +1,52 @@
+﻿<Page
+    x:Class="App2.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App2"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <RelativePanel>
+            <Button Name="Search" Content="Search" RelativePanel.AlignRightWithPanel="True" Margin="10,10,10,10"/>
+            <TextBox Name="searchTextbBox" MaxWidth="250" RelativePanel.LeftOf="Search" Margin="10,10,2,10" MaxHeight="10"/>
+            <TextBlock Text="Search: " RelativePanel.LeftOf="searchTextbBox" Margin="10,10,2,10" RelativePanel.AlignVerticalCenterWith="searchTextbBox"/>
+            <TextBlock Text="TITLE" RelativePanel.AlignLeftWithPanel="True" FontWeight="ExtraBold" RelativePanel.AlignVerticalCenterWith="Search" Margin="10,0,0,0"/>
+        </RelativePanel>
+
+        <SplitView Grid.Row="1" Name="LeftSideBar" PointerExited="LeftSideBar_PointerMoved" PointerEntered="LeftSideBar_PointerMoved" DisplayMode="CompactInline"  CompactPaneLength="50" OpenPaneLength="100">
+            <SplitView.Pane>
+                <StackPanel>
+                    <Button Content="He" Margin="10,10,10,10" Width="30"/>
+                    <Button Content="B" Margin="10,10,10,10" Width="30"/>
+                    <Button Content="N" Margin="10,10,10,10" Width="30"/>
+                </StackPanel>
+            </SplitView.Pane>
+           
+        </SplitView>
+
+
+        <Border Grid.Row="2" BorderThickness="5" Background="DeepSkyBlue" BorderBrush="DeepSkyBlue">
+            <RelativePanel>
+                <StackPanel RelativePanel.AlignHorizontalCenterWithPanel="True" Orientation="Horizontal">
+                    <TextBlock Text="User :" Margin="10,0,0,0"/>
+                    <TextBlock Text="Rama" Margin="5,0,0,0"/>
+                </StackPanel>
+            </RelativePanel>
+        </Border>
+
+        
+        
+
+
+
+
+    </Grid>
+</Page>
